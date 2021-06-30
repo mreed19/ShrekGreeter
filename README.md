@@ -12,7 +12,7 @@ Set discord bot token value in the `.env` file.
 TOKEN=<token_value>
 ```
 
-Start bot running with `make`
+Start bot running with `make start_bot`
 
 Alternatively:
 
