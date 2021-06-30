@@ -1,0 +1,30 @@
+{
+  "name": "shrek-greeter",
+  "version": "1.0.0",
+  "description": "A Discord Bot to play a special greeting message from Shrek when a user joins a voice channel\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreed19/ShrekGreeter.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "node",
+    "shrek"
+  ],
+  "author": "Michael Reed <michael.reed315@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mreed19/ShrekGreeter/issues"
+  },
+  "homepage": "https://github.com/mreed19/ShrekGreeter#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "discord.js": "^12.5.3",
+    "ffmpeg-static": "^4.4.0"
+  }
+}
