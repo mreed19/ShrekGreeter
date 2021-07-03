@@ -20,17 +20,20 @@ bot.on('voiceStateUpdate', async (oldMember, newMember) => {
   if (newUserChannel && oldUserChannel !== newUserChannel) {
     try {
       const connection = await newMember.channel.join();
-      const dispatcher = connection.play('ShrekMessage.wav');
 
-      dispatcher.on('finish', () => {
-        connection.disconnect();
-        dispatcher.destroy()
-      });
-      dispatcher.on('error', (err) => {
-        connection.disconnect();
-        dispatcher.destroy();
-        throw new Error(err);
-      });
+      setTimeout(() => {
+        const dispatcher = connection.play('ShrekMessage.wav');
+
+        dispatcher.on('finish', () => {
+          connection.disconnect();
+          dispatcher.destroy()
+        });
+        dispatcher.on('error', (err) => {
+          connection.disconnect();
+          dispatcher.destroy();
+          throw new Error(err);
+        });
+      }, 5000)
     } catch (err) {
       console.log(`ERROR: Something went wrong trying to play message: ${err}`);
     }
